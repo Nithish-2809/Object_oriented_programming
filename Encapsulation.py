@@ -30,7 +30,7 @@ class Account :
     def set_balance(self,balance) :
         #use multiple checks for safetey before setting the variable
         
+
 #wrapping of data,setter and getter methods as a single unit (class) is called encapsulation.
 #Encapsulation is used for keeping the data safe and secure
         
-

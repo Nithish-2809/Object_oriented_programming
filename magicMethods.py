@@ -43,4 +43,26 @@ class Person :
 p = Person("Nithish","20")
 p.gender = "Male"
 print(p.gender)
-    
+
+
+#destructor
+#In Python, a destructor is a special method named __del__(). It is automatically called when an object is about 
+# to be destroyed or garbage collected. While Python relies on an automatic garbage collector for memory management, 
+# the destructor is primarily used to perform non-memory cleanup tasks, such as closing open database connections, 
+# releasing network sockets, or closing files
+
+class FileManager:
+    def __init__(self, filename):
+        print(f"Opening file: {filename}")
+        self.file = open(filename, "w")
+
+    # This is the destructor method
+    def __del__(self):
+        print("Destructor called: Closing the file.")
+        self.file.close()
+
+# 1. Object Creation (Triggers __init__)
+obj = FileManager("test.txt")
+
+# 2. Object Destruction (Triggers __del__)
+del obj

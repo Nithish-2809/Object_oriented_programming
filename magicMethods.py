@@ -3,8 +3,6 @@
 #They allow you to define how objects behave when used with standard Python operators and built-in functions,
 #enabling you to implement operator overloading and tap into Python’s core language features
 
-
-
 #self means object itself
 
 class Student :
@@ -25,6 +23,10 @@ class Student :
 s1 = Student("Nithish",19)
 # print(s1)
 s2 = Student("Vikash",20)
+
+#In Python, str() is meant for users to provide a clean, readable text representation, while repr() is meant for
+# developers to provide an unambiguous, detailed representation that can ideally be used to recreate the object.
+
 
 # print(s1.age+s2.age)
 print(s1+s2)#__add__

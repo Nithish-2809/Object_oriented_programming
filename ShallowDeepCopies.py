@@ -27,8 +27,8 @@ original = [1, [2, 3]]
 
 # 1. Shallow Copy
 shallow_a = copy.copy(original)
-shallow_b = original.copy()  # Built-in list method
-shallow_c = original[:]       # Slicing creates shallow copy
+shallow_b = original.copy()  # Built-in list method        
+shallow_c = original[:]      # Slicing creates shallow copy
 
 # 2. Deep Copy
 deep_a = copy.deepcopy(original)

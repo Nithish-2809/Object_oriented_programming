@@ -34,6 +34,7 @@ my_dog.bark()  # Output: The dog barks.
 #Aggregation
 #Aggregation is when one class borrows or holds another independent class as a part of itself.
 #Aggregation represents has-a relationship
+#represents weak "has-a" relationship
 
 
 class Address :
@@ -55,6 +56,29 @@ add1 = Address("BHEL TOWNSIP",502032,"Hyderabad")
 cust1 = Customer("Nithish",20,add1)
 
 cust1.print_address()
+
+#Composition
+#Composition is when one class creates and completely owns another dependent class as a part of itself.
+# #If the main class is destroyed, the internal class is also destroyed.pythonclass Account:
+#represents strong "has-a" relationship
+
+def __init__(self, acc_no, balance):
+        self.acc_no = acc_no
+        self.balance = balance
+
+class Customer:
+    def __init__(self, name, age, acc_no, balance):
+        self.name = name
+        self.age = age
+        # Creating the Account object INSIDE the Customer
+        self.account = Account(acc_no, balance) 
+    
+    def print_account_details(self):
+        print(self.account.acc_no, self.account.balance)
+
+# You only create the Customer. The Account is automatically created inside.
+cust1 = Customer("Nithish", 20, 987654321, 50000)
+
 
 #Private variables cant be accessed in aggregation we should use getter and setter methods
 
